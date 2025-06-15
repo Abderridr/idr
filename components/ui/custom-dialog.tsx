@@ -27,7 +27,10 @@ export function CustomDialog({
   children,
   hideTitle = false,
 }: CustomDialogProps) {
-  const TitleComponent = hideTitle ? VisuallyHidden : React.Fragment;
+  import { Fragment } from 'react';
+...
+const TitleComponent = hideTitle ? VisuallyHidden : Fragment;
+
   
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
